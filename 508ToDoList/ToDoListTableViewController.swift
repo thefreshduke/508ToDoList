@@ -23,7 +23,12 @@ class ToDoListTableViewController: UITableViewController {
     }
     
     @IBAction func unwindToList (segue: UIStoryboardSegue) {
-        
+        let source: NewItemViewController = segue.sourceViewController as! NewItemViewController
+        let item: ToDoItem = source.toDoItem
+        if (item.itemName != "") {
+            self.toDoItems.append(item)
+        }
+        self.tableView.reloadData()
     }
 
     override func viewDidLoad() {

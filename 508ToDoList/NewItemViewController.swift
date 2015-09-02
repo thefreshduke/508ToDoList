@@ -9,6 +9,12 @@
 import UIKit
 
 class NewItemViewController: UIViewController {
+    
+    var toDoItem = ToDoItem()
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    @IBOutlet weak var textField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,15 @@ class NewItemViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue (segue: UIStoryboardSegue, sender: AnyObject?) {
+        if ((sender as! UIBarButtonItem) != self.saveButton) {
+            return
+        }
+        if ((self.textField.text) != nil) {
+            self.toDoItem.itemName = self.textField.text
+            self.toDoItem.completed = false
+        }
+    }
 
     /*
     // MARK: - Navigation
