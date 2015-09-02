@@ -13,6 +13,8 @@
 		6F08986D1B96A2C0003CFB70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F08986C1B96A2C0003CFB70 /* Images.xcassets */; };
 		6F0898701B96A2C0003CFB70 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F08986E1B96A2C0003CFB70 /* LaunchScreen.xib */; };
 		6F08987C1B96A2C0003CFB70 /* _08ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F08987B1B96A2C0003CFB70 /* _08ToDoListTests.swift */; };
+		6F0898861B96A71A003CFB70 /* ToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0898851B96A71A003CFB70 /* ToDoListTableViewController.swift */; };
+		6F0898881B96A72A003CFB70 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0898871B96A729003CFB70 /* NewItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		6F0898751B96A2C0003CFB70 /* 508ToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 508ToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F08987A1B96A2C0003CFB70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F08987B1B96A2C0003CFB70 /* _08ToDoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _08ToDoListTests.swift; sourceTree = "<group>"; };
+		6F0898851B96A71A003CFB70 /* ToDoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewController.swift; sourceTree = "<group>"; };
+		6F0898871B96A729003CFB70 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				6F0898651B96A2C0003CFB70 /* AppDelegate.swift */,
 				6F0898671B96A2C0003CFB70 /* ViewController.swift */,
 				6F0898691B96A2C0003CFB70 /* Main.storyboard */,
+				6F0898851B96A71A003CFB70 /* ToDoListTableViewController.swift */,
+				6F0898871B96A729003CFB70 /* NewItemViewController.swift */,
 				6F08986C1B96A2C0003CFB70 /* Images.xcassets */,
 				6F08986E1B96A2C0003CFB70 /* LaunchScreen.xib */,
 				6F0898631B96A2C0003CFB70 /* Supporting Files */,
@@ -214,6 +220,8 @@
 			files = (
 				6F0898681B96A2C0003CFB70 /* ViewController.swift in Sources */,
 				6F0898661B96A2C0003CFB70 /* AppDelegate.swift in Sources */,
+				6F0898881B96A72A003CFB70 /* NewItemViewController.swift in Sources */,
+				6F0898861B96A71A003CFB70 /* ToDoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

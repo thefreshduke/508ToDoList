@@ -59,11 +59,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Item" id="8Dp-d0-7Jk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="iLT-Ug-nLa"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="wLI-ne-nEQ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="iLT-Ug-nLa">
+                            <connections>
+                                <segue destination="wz3-Zf-fsw" kind="unwind" unwindAction="unwindToList:" id="GN9-Ry-RO4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="wLI-ne-nEQ">
+                            <connections>
+                                <segue destination="wz3-Zf-fsw" kind="unwind" unwindAction="unwindToList:" id="sjm-Wo-Vzz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="wz3-Zf-fsw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2014" y="359"/>
         </scene>
