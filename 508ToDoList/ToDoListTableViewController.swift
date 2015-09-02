@@ -10,6 +10,18 @@ import UIKit
 
 class ToDoListTableViewController: UITableViewController {
     
+    var toDoItems = [ToDoItem]()
+    
+    func loadInitialData() {
+        var item1 = ToDoItem()
+        item1.itemName = "Shoot"
+        self.toDoItems.append(item1)
+        var item2 = ToDoItem()
+        item2.itemName = "Guard"
+        self.toDoItems.append(item2)
+        var item3 = ToDoItem()
+    }
+    
     @IBAction func unwindToList (segue: UIStoryboardSegue) {
         
     }
@@ -34,13 +46,33 @@ class ToDoListTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return self.toDoItems.count
+    }
+    
+    override func tableView (tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ToDoListProtoCell", forIndexPath: indexPath) as! UITableViewCell
+        let tempToDoItem: ToDoItem = self.toDoItems[indexPath.row]
+        cell.textLabel?.text = tempToDoItem.itemName
+        if (tempToDoItem.completed) {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        }
+        else {
+            cell.accessoryType = UITableViewCellAccessoryType.None
+        }
+        return cell
+    }
+    
+    override func tableView (tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        let tappedItem: ToDoItem = self.toDoItems[indexPath.row]
+        tappedItem.completed = !tappedItem.completed
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
     }
 
     /*
