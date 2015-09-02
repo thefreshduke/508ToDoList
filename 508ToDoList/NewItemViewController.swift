@@ -10,11 +10,11 @@ import UIKit
 
 class NewItemViewController: UIViewController {
     
-    var toDoItem = ToDoItem()
-    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     @IBOutlet weak var textField: UITextField!
+    
+    var toDoItem = ToDoItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,6 +11,17 @@ import UIKit
 class ToDoListTableViewController: UITableViewController {
     
     var toDoItems = [ToDoItem]()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadInitialData()
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
     
     func loadInitialData() {
         var item1 = ToDoItem()
@@ -19,26 +30,6 @@ class ToDoListTableViewController: UITableViewController {
         var item2 = ToDoItem()
         item2.itemName = "Guard"
         self.toDoItems.append(item2)
-        var item3 = ToDoItem()
-    }
-    
-    @IBAction func unwindToList (segue: UIStoryboardSegue) {
-        let source: NewItemViewController = segue.sourceViewController as! NewItemViewController
-        let item: ToDoItem = source.toDoItem
-        if (item.itemName != "") {
-            self.toDoItems.append(item)
-        }
-        self.tableView.reloadData()
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -134,5 +125,14 @@ class ToDoListTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindToList (segue: UIStoryboardSegue) {
+        let source: NewItemViewController = segue.sourceViewController as! NewItemViewController
+        let item: ToDoItem = source.toDoItem
+        if (item.itemName != "") {
+            self.toDoItems.append(item)
+        }
+        self.tableView.reloadData()
+    }
 
 }
