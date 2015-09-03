@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2hs-t1-RtJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--ToDoList-->
@@ -49,8 +50,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add new item" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yxI-a1-Izu">
-                                <rect key="frame" x="147" y="223" width="307" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add new item" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yxI-a1-Izu">
+                                <rect key="frame" x="66" y="227" width="467" height="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -58,8 +59,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="yxI-a1-Izu" secondAttribute="centerX" id="nXx-Gz-5Uf"/>
-                            <constraint firstAttribute="centerY" secondItem="yxI-a1-Izu" secondAttribute="centerY" constant="62" id="pmp-bW-LqU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yxI-a1-Izu" secondAttribute="trailing" constant="51" id="2BA-rN-7bZ"/>
+                            <constraint firstItem="yxI-a1-Izu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="PZk-iN-tnT"/>
+                            <constraint firstItem="yxI-a1-Izu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="163" id="VIP-xy-fbC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Item" id="8Dp-d0-7Jk">
